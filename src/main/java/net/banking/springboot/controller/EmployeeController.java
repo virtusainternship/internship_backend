@@ -28,13 +28,7 @@ public class EmployeeController {
     @PostMapping
     public Employee createEmployee(@RequestBody Employee employee) {
     	System.out.println("ctrl into createEployee" + employee.toString());
-    	Employee emp = new Employee();
-    	try {
-    		emp = employeeRepository.save(employee);
-    	} catch (Exception e) {
-    		System.out.println("Exception in saving to db" + e);
-    	}
-    	return emp;
+    	return employeeRepository.save(employee);
     }
 
     // build get employee by id REST API

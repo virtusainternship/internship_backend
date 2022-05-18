@@ -1,0 +1,51 @@
+package net.banking.springboot.controller;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Test {
+
+	class Question {
+		List<Question> childQuestions;
+		List<Answer> answers;
+		
+		String question;
+
+		public Question(List<Question> childQuestions, List<Answer> answers, String question) {
+			this.childQuestions = childQuestions;
+			this.answers = answers;
+			this.question = question;
+		}
+		
+		
+	}
+	
+	class Answer{
+		List<Question> childQuestion;
+		String answer;
+
+		public Answer(List<Question> childQuestion, String answer) {
+			this.childQuestion = childQuestion;
+			this.answer = answer;
+		}
+		
+		
+	}
+	
+	public void printAllQuestionsAndAnswers(Question q) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Question> quesn1 = new LinkedList<Question>();
+		List<Answer> ans1 = new LinkedList<Answer>();
+		
+		
+		List<Question> quesn2 = new LinkedList<Question>();
+		List<Answer> ans2 = new LinkedList<Answer>();
+		
+		
+		
+	}
+
+}
